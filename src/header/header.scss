@@ -134,10 +134,6 @@ color: #DB956E;
   
 
 @media (min-width: 769px) and  (max-width: 1024px){
-  .header{
-    width: 80%;
-    margin: auto;
-  }
 
   .nav-options {
     display: flex;
@@ -156,11 +152,6 @@ color: #DB956E;
 }
 
 @media  (min-width: 1025px) and (max-width: 1440px){
-
-  // .header{
-  //   width: 90%;
-  //   margin: auto;
-  // }
 
   .mobile-menu{
     display: none;
