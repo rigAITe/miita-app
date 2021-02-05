@@ -70,18 +70,19 @@ img{
 /*----------------------- Determine ---------------------------*/
 
 .determine{
+    padding-bottom: 3rem;
     & p{
         text-align: center;
         padding-top: 1rem;
         padding-bottom: 2rem;
-        font-size: .9rem;
+        font-size: 1rem;
     }
     &-inner{
         display: flex;
         padding-bottom: 2rem;
         justify-content: space-between;
         align-items: center;
-        font-size: .9rem;
+        font-size: .95rem;
     }
     & img{
         width: 1.07rem;
@@ -123,6 +124,7 @@ img{
     &-details{
         text-align: center;
         font-size: 1rem;
+        margin-bottom: 3rem;
     }
     &-button{
         text-align: center;
@@ -141,7 +143,6 @@ img{
             width: 6.5rem;
             font-size: .96rem;
             border: none;
-            margin-bottom: 2.5rem;
             cursor: pointer;
         }
     } 
@@ -345,7 +346,7 @@ footer{
             font-size: 1rem;
         }
         & P{
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
     }
 
