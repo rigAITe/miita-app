@@ -11,7 +11,7 @@ import { NavLink } from 'react-router-dom'
 const PaginationA1 = () => {
 
     return(
-        <div className="primary full-height">
+        <div className="primary ">
             <div className="primary-inner">
                 <Header/>
                 <div className="paginationA1">

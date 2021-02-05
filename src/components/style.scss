@@ -124,7 +124,7 @@ img{
     &-details{
         text-align: center;
         font-size: 1rem;
-        margin-bottom: 3rem;
+        margin-bottom: 3.5rem;
     }
     &-button{
         text-align: center;
@@ -241,11 +241,11 @@ footer{
 
     .determine{
         &-inner{
-            width: 50%;
-            font-size: 1rem;
+            width: 60%;
+            font-size: 1.07rem;
         }
         & p{
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
     }
 
@@ -253,7 +253,7 @@ footer{
 
     .paginationA1{
         &-details p{
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
         &-button{
             & a:nth-child(1), 
@@ -261,7 +261,7 @@ footer{
                 margin-right: 2rem;
             }
             & button{
-                font-size: .8rem;
+                font-size: .93rem;
                 width: 7rem;
             }
         } 
@@ -276,6 +276,12 @@ footer{
         & input,
         & button{
             width: 60%;
+        }
+        & input{
+            font-size: .95rem;
+        }
+        & button{
+            font-size: .95rem;
         }
     }
 
@@ -342,11 +348,11 @@ footer{
     .determine{
         padding-bottom: 5rem;
         &-inner{
-            width: 30%;
-            font-size: 1rem;
+            width: 35%;
+            font-size: 1.09rem;
         }
         & P{
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
     }
 
@@ -355,7 +361,7 @@ footer{
 
     .paginationA1{
         &-details p{
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
         &-button{
             & a:nth-child(1), 
@@ -363,7 +369,7 @@ footer{
                 margin-right: 2rem;
             }
             &  button{
-                font-size: .9rem;
+                font-size: .95rem;
                 width: 12rem;
             }
         }
@@ -378,7 +384,7 @@ footer{
         & input,
         & button{
             width: 60%;
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
         & button{
             margin-bottom: 4rem;
