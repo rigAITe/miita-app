@@ -81,7 +81,7 @@ img{
         padding-bottom: 2rem;
         justify-content: space-between;
         align-items: center;
-        font-size: .8rem;
+        font-size: .9rem;
     }
     & img{
         width: 1.07rem;
@@ -111,12 +111,18 @@ img{
     }
 }
 
+
+.pagination{
+    width: 80%;
+    margin: auto;
+}
+
 .paginationA1{
     width: 1.5rem;
     padding-bottom: .5rem;
     &-details{
         text-align: center;
-        font-size: .9rem;
+        font-size: 1rem;
     }
     &-button{
         text-align: center;
@@ -124,7 +130,6 @@ img{
         padding-bottom: 2rem;
         display: flex;
         justify-content: center;
-
         & a:nth-child(1), 
         & a:nth-child(2){
             margin-right: .3rem;
@@ -133,18 +138,13 @@ img{
             color: #fff;
             background:  $paginationPrimaryColor;
             padding: .5rem .2rem;
-            width: 5.5rem;
-            font-size: .9rem;
+            width: 6.5rem;
+            font-size: .96rem;
             border: none;
             margin-bottom: 2.5rem;
             cursor: pointer;
         }
     } 
-}
-
-.pagination{
-    width: 80%;
-    margin: auto;
 }
 
 .location{
@@ -163,14 +163,14 @@ img{
         border: none;   
         padding: .4rem .9rem;
         margin-bottom: 3rem;
-        font-size: .9rem;
+        font-size: .95rem;
     }
     & input{
         background: $paginationPrimaryColor;
         border: none;
         padding: .4rem .9rem;
         margin-bottom: 1.5rem;
-        font-size: .9rem;
+        font-size: .95rem;
     }
 }
 
