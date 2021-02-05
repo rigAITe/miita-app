@@ -21,8 +21,8 @@ const Determine = () => {
                             <NavLink to="/paginationA1"><div><img src={Arrow} alt="arrow"/></div></NavLink>
                         </div>
                         <div className="determine-inner">
-                            <div>How long my purchased unit will last?</div>
-                            <NavLink to=""><div><img src={Arrow} alt="arrow"/></div></NavLink>
+                            <NavLink to="/paginationB1"><div>How long my purchased unit will last?</div></NavLink>
+                            <NavLink to="/paginationB1"><div><img src={Arrow} alt="arrow"/></div></NavLink>
                         </div>
                     </div>
                 </div>

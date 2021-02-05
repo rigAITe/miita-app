@@ -4,7 +4,7 @@ const Input = ({placeholder}) => {
 
     return(
         <div>
-            <input placeholder={placeholder}></input>
+            <input placeholder={placeholder} required/>
         </div>
     )
 }

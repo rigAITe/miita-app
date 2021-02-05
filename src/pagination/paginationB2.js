@@ -1,19 +1,19 @@
 import React from 'react'
 import Header from '../header/header'
 import Footer from '../components/footer'
-import PaginationPathA from './paginationPathA'
+import PaginationPathB from './paginationPathB'
 import Input from '../components/input'
 import Button from '../components/button'
 
 
-const PaginationAB2 = () => {
+const PaginationB2 = () => {
 
     return(
         <div className="primary">
             <div className="primary-inner">
                 <Header/>
                 <div className="pagination">
-                    <PaginationPathA/>
+                    <PaginationPathB/>
                 </div>
                 <div className="paginationA1-details">
                     <p>Tell us the State and City the Bulding is located</p>
@@ -32,4 +32,4 @@ const PaginationAB2 = () => {
     )
 }
 
-export default PaginationAB2
+export default PaginationB2
