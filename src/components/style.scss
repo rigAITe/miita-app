@@ -3,6 +3,7 @@
 $background: #35073D;
 $textColor: #fff;
 $fillColor: #DB956E;
+$paginationPrimaryColor: #ffffff4d;
 
 @mixin containerM {
     width: 90%;
@@ -22,23 +23,27 @@ $fillColor: #DB956E;
     color: $textColor
 }
 
+a{
+    text-decoration: none;
+}
+
 img{
     width: 100%;
 }
 
-
-/*----------------------- HOME ---------------------------*/
-
-.home{
+.primary{
     background: $background;
     &-inner{
         @include containerM();
     }
 }
 
+
+
+/*----------------------- HOME ---------------------------*/
+
 .headerMain{
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
-    padding-bottom: 5rem;
+    padding-bottom: 3rem;
     div:first-child{
         padding-bottom: 2rem;
         & h1{
@@ -62,9 +67,122 @@ img{
     } 
 } 
 
+/*----------------------- Determine ---------------------------*/
+
+.determine{
+    & p{
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        font-size: .8rem;
+    }
+    &-inner{
+        display: flex;
+        padding-bottom: 2rem;
+        justify-content: space-between;
+        align-items: center;
+        font-size: .8rem;
+    }
+    & img{
+        width: 1rem;
+    }
+}
+
+/*----------------------- PAGINATION ---------------------------*/
+
+
+.paginationPathA{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 3rem;
+    & a {
+        color: $paginationPrimaryColor;
+        font-size: .9rem;
+        border: 1px solid $paginationPrimaryColor;
+        padding: .2rem .5rem;
+        border-radius: .3rem;
+        & img{
+            max-width: 10px;
+        }
+    }
+    & a.active{
+        border: 1px solid $fillColor;
+        color: $fillColor;
+    }
+}
+
+.paginationA1{
+    width: 1.5rem;
+    padding-bottom: .5rem;
+    &-details{
+        text-align: center;
+        font-size: .9rem;
+    }
+    &-button{
+        text-align: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+
+        & a:nth-child(1), 
+        & a:nth-child(2){
+            margin-right: .3rem;
+        }
+        & button{
+            color: #fff;
+            background:  $paginationPrimaryColor;
+            padding: .5rem .2rem;
+            width: 5.5rem;
+            font-size: .8rem;
+            border: none;
+            margin-bottom: 2.5rem;
+            cursor: pointer;
+        }
+    } 
+}
+
+.pagination{
+    width: 80%;
+    margin: auto;
+}
+
+.location{
+    padding-top: 2rem;
+}
+
+.data-width{
+    padding-top: 2rem;
+    & input,
+    & button {
+        width: 100%;
+        margin: auto;
+    }
+    & button{
+        background: linear-gradient(180deg, #DB956E 0%, #db956e5c 100%);;
+        border: none;   
+        padding: .4rem .9rem;
+        margin-bottom: 3rem;
+        font-size: .8rem;
+    }
+    & input{
+        background: $paginationPrimaryColor;
+        border: none;
+        padding: .4rem .9rem;
+        margin-bottom: 1.5rem;
+        font-size: .8rem;
+    }
+}
+
+
+
 /*----------------------- FOOTER ---------------------------*/
 
 footer{
+    border-top: 0.5px solid #ffffff4d;
+    // position: absolute;
+    bottom: 0;
+    // width: 100%;
     & .footer-logo{
         & img{
             padding-top: 2rem;
@@ -118,6 +236,48 @@ footer{
 
 @media (min-width: 768px) and (max-width: 1023px){
 
+    /*----------------------- Determine ---------------------------*/
+
+    .determine{
+        &-inner{
+            width: 50%;
+            font-size: 1rem;
+        }
+        & p{
+            font-size: 1rem;
+        }
+    }
+
+    /*----------------------- PAGINATION ---------------------------*/
+
+    .paginationA1{
+        &-details p{
+            font-size: 1rem;
+        }
+        &-button{
+            & a:nth-child(1), 
+            & a:nth-child(2){
+                margin-right: 2rem;
+            }
+            & button{
+                font-size: .8rem;
+                width: 7rem;
+            }
+        } 
+    }
+
+    .pagination{
+        width: 60%;
+        margin: auto;
+    }
+
+    .data-width{
+        & input,
+        & button{
+            width: 60%;
+        }
+    }
+
     /*----------------------- FOOTER ---------------------------*/
 
     .headerMain{
@@ -149,6 +309,10 @@ footer{
 
 @media  (min-width: 1024px) and (max-width: 1440px){
 
+    .full-height{
+        height: 100vh;
+    }
+
     /*----------------------- HOME ---------------------------*/
 
     .headerMain{
@@ -171,16 +335,57 @@ footer{
         }
     }
 
+    /*----------------------- DETERMINE ---------------------------*/
     
 
+    .determine{
+        padding-bottom: 5rem;
+        &-inner{
+            width: 30%;
+            font-size: 1rem;
+        }
+        & P{
+            font-size: 1rem;
+        }
+    }
 
+
+    /*----------------------- PAGINATION ---------------------------*/
+
+    .paginationA1{
+        &-details p{
+            font-size: 1.1rem;
+        }
+        &-button{
+            & a:nth-child(1), 
+            & a:nth-child(2){
+                margin-right: 2rem;
+            }
+            &  button{
+                font-size: .9rem;
+                width: 12rem;
+            }
+        }
+    }
+
+    .pagination{
+        width: 60%;
+        margin: auto;
+    }
+
+    .data-width{
+        & input,
+        & button{
+            width: 60%;
+            font-size: 1rem;
+        }
+        & button{
+            margin-bottom: 4rem;
+        }
+    }
 
 
     /*----------------------- FOOTER ---------------------------*/
-
-    // footer{
-    //     font-size: 1rem;
-    // }
 
     .info-tip{
         display: flex;

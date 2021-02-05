@@ -1,5 +1,8 @@
 import React from 'react'
 import Home from './components/home'
+import Determine from './components/letsDetermine'
+import PaginationA1 from './pagination/paginationA1'
+import PaginationA2 from './pagination/paginationA2'
 import './components/style.scss'
 
 
@@ -10,11 +13,11 @@ const  App = () => {
     
     <Router>
         <div>
-        {/* <Header/> */}
         {/* <ScrollToTop /> */}
         <Switch>
-          {/* <Route path="/" component={} />
-          <Route path='/' component = {}/> */}
+        <Route path="/paginationA2" component={PaginationA2}/>
+          <Route path="/paginationA1" component={PaginationA1}/>
+          <Route path="/to-determine" component={Determine}/>
           <Route exact path='/'  component={Home} />
         </Switch>
       </div>

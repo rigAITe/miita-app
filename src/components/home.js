@@ -6,8 +6,8 @@ import Footer from './footer'
 const Home = () => {
 
     return (
-        <div className="home">
-            <div className="home-inner">
+        <div className="primary">
+            <div className="primary-inner">
                 <Header/>
                 <HeaderMain/>
                 <Footer/>
