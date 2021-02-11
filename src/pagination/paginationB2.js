@@ -4,6 +4,8 @@ import Footer from '../components/footer'
 import PaginationPathB from './paginationPathB'
 import Input from '../components/input'
 import Button from '../components/button'
+import { NavLink } from 'react-router-dom'
+
 
 
 const PaginationB2 = () => {
@@ -22,7 +24,7 @@ const PaginationB2 = () => {
                             <Input placeholder="Location"/>
                         </div>
                         <div>
-                            <Button text="Next"/>
+                            <NavLink to="/paginationB3"><Button text="Calculate"/></NavLink>
                         </div>
                     </div>
                 </div>

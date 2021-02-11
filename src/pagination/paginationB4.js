@@ -1,37 +1,38 @@
 import React from 'react'
 import Header from '../header/header'
 import Footer from '../components/footer'
-import PaginationPathA from './paginationPathA'
+import PaginationPathB from './paginationPathB'
 import Input from '../components/input'
 import Button from '../components/button'
 import { NavLink } from 'react-router-dom'
 
 
 
-const PaginationA2 = () => {
+const Pagination3 = () => {
 
-    return(
+    return (
         <div className="primary">
             <div className="primary-inner">
                 <Header/>
                 <div className="pagination">
-                    <PaginationPathA/>
+                    <PaginationPathB/>
                 </div>
                 <div className="paginationA1-details">
-                    <p>Tell us the State and City the Bulding is located</p>
+                    <p>What date did you start using it?</p>
                     <div className="data-width">
                         <div >
-                            <Input placeholder="Location"/>
+                            <Input placeholder="NGN" type="date"/>
                         </div>
                         <div>
-                            <NavLink to="/paginationA3"><Button text="Next"/></NavLink>
+                            <NavLink to="/paginationB5"><Button text="Next"/></NavLink>
                         </div>
                     </div>
                 </div>
                 <Footer/>
             </div>
         </div>
+            
     )
 }
 
-export default PaginationA2
+export default Pagination3
