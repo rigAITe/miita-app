@@ -59,7 +59,7 @@ const PaginationB6 = () => {
                             </div>
                         </div>
                         <div>
-                            <Button text="Give Feedback"/>
+                            <NavLink to="/paginationB7"><Button text="Give Feedback"/></NavLink>
                         </div>
                     </div>
                     <div>

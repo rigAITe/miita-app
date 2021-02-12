@@ -37,6 +37,7 @@ const PaginationA3 = () => {
                             <label>Hours on per day</label>
                             <Input type="number"/>
                         </div>
+                        <div className="add-device">+ Add more appliance</div>
                         <div>
                             <NavLink to="/paginationA4"><Button text="Calculate"/></NavLink>
                         </div>
