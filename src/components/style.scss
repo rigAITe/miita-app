@@ -38,6 +38,14 @@ img{
     }
 }
 
+button{
+    border-radius: .2rem;
+}
+
+input{
+    border-radius: .2rem;
+}
+
 
 
 /*----------------------- HOME ---------------------------*/
@@ -125,6 +133,9 @@ img{
         text-align: center;
         font-size: 1rem;
         margin-bottom: 3.5rem;
+        & p{
+            padding-bottom: 2rem;
+        }
     }
     &-button{
         text-align: center;
@@ -153,8 +164,10 @@ img{
 }
 
 .unit{
-    display: flex;
-    // text-align: center;
+    // display: flex;
+    display: grid;
+  grid-template-columns: repeat(2, auto);
+    text-align: center;
     justify-content: center;
     // padding-top: 1rem;
     border: 1px solid $paginationPrimaryColor;
@@ -165,11 +178,18 @@ img{
         color:  #ffffffb3;
 
     }
+    &-inner{
+        display: flex;
+        border: .5px solid $paginationPrimaryColor;
+        & > *{
+            margin: .5rem;
+        }
+    }
 }
 
 .add-device{
     text-align: left;
-    font-size: .6rem;
+    font-size: .75rem;
     color: $fillColor;
     padding-bottom: 1rem;
 }
@@ -247,8 +267,15 @@ img{
     padding-top: 2rem;
 }
 
+.appliance-header{
+    text-align: center;
+    // font-size: 1.1rem;
+    padding-bottom: 2.5rem;
+}
+
+.residential-appliances,
 .data-width{
-    padding-top: 2rem;
+    // padding-top: 2rem;
     & input,
     & button {
         width: 100%;
@@ -285,6 +312,41 @@ textarea{
     display: block;
     margin-bottom: 1rem;
     padding: .5rem;
+}
+
+.add-devices{
+    display: none;
+}
+
+.add-more-device{
+    display: flex;
+    font-size: .8rem;
+    color: $paginationPrimaryColor;
+    padding-bottom: 1rem;
+    justify-content: space-between;
+    & > *{
+        flex: 1 1 25px;
+        color: $paginationPrimaryColor;
+    }
+
+    & b,
+    & p{
+        color: $paginationPrimaryColor;
+        padding-bottom: 0;
+    }
+
+    & .quantity input{
+        text-align: center;
+    }
+    & div:first-child {
+        text-align: left;
+    }
+}
+
+.bin svg{
+    width: 20px;
+    height: 20px;
+    text-align: right;
 }
 
 
@@ -380,6 +442,9 @@ footer{
                 width: 7rem;
             }
         } 
+        & img{
+            width: 130%;
+        }
     }
 
     .pagination{
@@ -387,12 +452,10 @@ footer{
         margin: auto;
     }
 
+    .residential-appliances,
     .data-width{
-        // & input,
-        // & button{
-            width: 60%;
+            width: 70%;
             margin: auto;
-        // }
         & input{
             font-size: .95rem;
         }
@@ -411,6 +474,12 @@ footer{
     .reactions{
         width: 60%;
         margin: auto;
+    }
+
+    .add-more-device{
+        & p{
+            font-size: .9rem;
+        }
     }
 
     /*----------------------- FOOTER ---------------------------*/
@@ -477,15 +546,17 @@ footer{
         padding-bottom: 5rem;
         &-inner{
             width: 35%;
-            font-size: 1.09rem;
+            font-size: 1.1rem;
         }
         & P{
-            font-size: 1.2rem;
+            font-size: 1.5rem;
         }
     }
 
 
     /*----------------------- PAGINATION ---------------------------*/
+
+    
 
     .paginationA1{
         &-details p{
@@ -509,12 +580,9 @@ footer{
     }
 
     .data-width{
-        // & input,
-        // & button{
             width: 40%;
             margin: auto;
             font-size: 1.1rem;
-        // }
         & button{
             margin-bottom: 4rem;
         }
@@ -529,6 +597,10 @@ footer{
         & > * {
             flex-grow: 1;
         }
+    }
+
+    .back-arrow{
+        width: 170%;
     }
 
     .reactions{
@@ -548,6 +620,47 @@ footer{
             padding-bottom: 2rem;
         }
     }
+
+    .add-more-device{
+        & b{
+            font-size: .7rem;
+        }
+    }
+
+    .add-device{
+        &-mobile{
+            display: none;   
+        }
+        &-display{
+            display: flex;
+            width: 70%;
+            margin-left: 20rem;
+        }
+    }
+
+    .add-devices{
+        display: block;
+        width: 40%;
+        margin-left: 2rem;
+        padding-left: 2rem;
+        border-left: 1px $paginationPrimaryColor solid;
+        & p{
+            font-size: .9rem;
+        }
+    }
+
+    .residential-appliances button,
+    .data-width button {
+        margin-bottom: 0rem; 
+    }
+
+    .appliance-header{
+        font-size: 1.5rem;
+    }
+
+    
+
+    
 
 
 
@@ -578,6 +691,20 @@ footer{
         }
     }
 
+
+
+
+
+
+
+
+
+
+    // .riggy{
+    //     display: flex;
+    //     font-size: .8rem;
+    //     justify-content: space-between;
+    // }
 }
 
 

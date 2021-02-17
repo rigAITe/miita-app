@@ -47,7 +47,7 @@ const Footer = () => {
                     <div> &copy; {year()} MIITA. All Rights Reserved</div>
                 </div>
             </div>
-            {/* the claculated appliances should be un the span tag below*/}
+            {/* the claculated appliances should be in the span tag below*/}
             <div className="calculator">We already calculated <span>120,457,357</span> appliances for different buildings</div>
         </footer>
     )

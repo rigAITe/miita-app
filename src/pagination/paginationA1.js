@@ -15,7 +15,7 @@ const PaginationAB1 = () => {
             <div className="primary-inner">
                 <Header/>
                 <div className="paginationA1">
-                    <NavLink to="/to-determine"><img src={Arrow} alt="arror img"/></NavLink>
+                    <NavLink to="/to-determine"><img className="back-arrow" src={Arrow} alt="arrow img"/></NavLink>
                 </div>
                 <div className="pagination">
                     <PaginationPathA/>

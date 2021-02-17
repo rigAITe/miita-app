@@ -44,17 +44,30 @@ const PaginationA4 = () => {
                 <div className="calc">
                     <div>
                         <div className="calc-inner">
-                            <p>Remaining days</p>
+                            <p>Unit consumed / month</p>
                             <div className="calc-data">37 days to go</div>
                             <div className="unit">
-                                <div>Unit</div>
-                                <div className="arrow" onClick={handleDaysClick}>
-                                    {click.days ? (
-                                        <Up/>
-                                    ) : (
-                                        <Down/>
-                                    )}
+                                <div className="unit-inner">
+                                    <div>Monthly</div>
+                                    <div className="arrow" onClick={handleDaysClick}>
+                                        {click.days ? (
+                                            <Up/>
+                                        ) : (
+                                            <Down/>
+                                        )}
+                                    </div>
                                 </div>
+                                <div className="unit-inner">
+                                    <div>Unit</div>
+                                    <div className="arrow" onClick={handleDaysClick}>
+                                        {click.days ? (
+                                            <Up/>
+                                        ) : (
+                                            <Down/>
+                                        )}
+                                    </div>
+                                </div>
+                                
                                 {/* <div className="arrow"><Down/></div> */}
                             </div>
                         </div>
@@ -67,14 +80,27 @@ const PaginationA4 = () => {
                             <p>Remaining days</p>
                             <div className="calc-data">25th October 2021</div>
                             <div className="unit">
-                                <div>End data</div>
-                                <div className="arrow" onClick={handleDateClick}>
-                                    {click.date ? (
-                                        <Up/>
-                                    ) : (
-                                        <Down/>
-                                    )}
+                                <div className="unit-inner">
+                                    <div>Monthly</div>
+                                    <div className="arrow" onClick={handleDateClick}>
+                                        {click.date ? (
+                                            <Up/>
+                                        ) : (
+                                            <Down/>
+                                        )}
+                                    </div>
                                 </div>
+                                <div className="unit-inner">
+                                <div>NGN</div>
+                                    <div className="arrow" onClick={handleDateClick}>
+                                        {click.date ? (
+                                            <Up/>
+                                        ) : (
+                                            <Down/>
+                                        )}
+                                    </div>
+                                </div>
+                               
                                 {/* <div className="arrow"><Down/></div> */}
                             </div>
                         </div>

@@ -21,7 +21,7 @@ const PaginationA2 = () => {
                     <p>Tell us the State and City the Bulding is located</p>
                     <div className="data-width">
                         <div >
-                            <Input placeholder="Location"/>
+                            <Input placeholder="City, State"/>
                         </div>
                         <div>
                             <NavLink to="/paginationA3"><Button text="Next"/></NavLink>
