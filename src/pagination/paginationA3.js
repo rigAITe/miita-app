@@ -13,10 +13,10 @@ const PaginationA3 = () => {
 
     const [ data, setData ] = useState([])
 
-    const [ appliance, setAppliance ] = useState('Cooker')
-    const [ watt, setWatt ] = useState('120')
-    const [ quantity, setQuantity ] = useState('3')
-    const [ hours, setHours ] = useState('2')
+    const [ appliance, setAppliance ] = useState('')
+    const [ watt, setWatt ] = useState('')
+    const [ quantity, setQuantity ] = useState('')
+    const [ hours, setHours ] = useState('')
     const [ remove, setRemove ] = useState(<Bin/>)
 
     const check = (e) => {
@@ -37,7 +37,11 @@ const PaginationA3 = () => {
         setWatt("")
         setQuantity("")
         setHours("")
+
     }
+
+    console.log(data)
+
 
     const handleAppliancesChange = (e) => {
         setAppliance(e.target.value)

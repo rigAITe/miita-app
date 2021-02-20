@@ -12,26 +12,24 @@ import PaginationPathA from './paginationPathA'
 const PaginationA4 = () => {
 
     const [ click, setClick ] = useState({
-        days: false,
-        date: false
+        month: false,
+        unit: false,
     })
 
-    const handleDaysClick = () => {
-        // console.log(click.days)
+    const handleMonthClick = () => {
         const daysClick = {
             ...click,
-            days: !click.days
+            month: !click.month,
         }
         setClick(daysClick)
     }
 
-    const handleDateClick = () => {
-        // console.log(click.date)
-        const dateClick = {
+    const handleUnitClick = () => {
+        const daysClick = {
             ...click,
-            date: !click.date,
-        } 
-        setClick(dateClick)
+            unit: !click.unit
+        }
+        setClick(daysClick)
     }
 
     return (
@@ -44,13 +42,33 @@ const PaginationA4 = () => {
                 <div className="calc">
                     <div>
                         <div className="calc-inner">
-                            <p>Unit consumed / month</p>
+                            <p>
+                                {click.unit ? (
+                                    'W'
+                                ) : (
+                                    'Unit'
+                                )}
+
+                                   /  
+
+                                {click.month ? (
+                                    'Yearly'
+                                ) : (
+                                    'Monthly'
+                                )} 
+                            </p>
                             <div className="calc-data">37 days to go</div>
                             <div className="unit">
-                                <div className="unit-inner">
-                                    <div>Monthly</div>
-                                    <div className="arrow" onClick={handleDaysClick}>
-                                        {click.days ? (
+                                <div className="unit-inner" onClick={handleMonthClick}>
+                                    <div>
+                                        {click.month ? (
+                                            'Yearly'
+                                        ) : (
+                                            'Monthly'
+                                        )}
+                                    </div>
+                                    <div className="arrow" onClick={handleMonthClick}>
+                                        {click.month ? (
                                             <Up/>
                                         ) : (
                                             <Down/>
@@ -58,9 +76,14 @@ const PaginationA4 = () => {
                                     </div>
                                 </div>
                                 <div className="unit-inner">
-                                    <div>Unit</div>
-                                    <div className="arrow" onClick={handleDaysClick}>
-                                        {click.days ? (
+                                    <div>{click.unit ? (
+                                            'W'
+                                        ) : (
+                                            'Unit'
+                                        )}
+                                    </div>
+                                    <div className="arrow" onClick={handleUnitClick}>
+                                        {click.unit ? (
                                             <Up/>
                                         ) : (
                                             <Down/>
@@ -82,22 +105,14 @@ const PaginationA4 = () => {
                             <div className="unit">
                                 <div className="unit-inner">
                                     <div>Monthly</div>
-                                    <div className="arrow" onClick={handleDateClick}>
-                                        {click.date ? (
-                                            <Up/>
-                                        ) : (
-                                            <Down/>
-                                        )}
+                                    <div className="arrow" >
+                                        <Down/>
                                     </div>
                                 </div>
                                 <div className="unit-inner">
                                 <div>NGN</div>
-                                    <div className="arrow" onClick={handleDateClick}>
-                                        {click.date ? (
-                                            <Up/>
-                                        ) : (
-                                            <Down/>
-                                        )}
+                                    <div className="arrow" >
+                                        <Down/>
                                     </div>
                                 </div>
                                

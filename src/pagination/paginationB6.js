@@ -47,7 +47,13 @@ const PaginationB6 = () => {
                             <p>Remaining days</p>
                             <div className="calc-data">37 days to go</div>
                             <div className="unit">
-                                <div>Unit</div>
+                                <div>
+                                    {click.days ? (
+                                        'W'
+                                    ) : (
+                                        'Unit'
+                                    )}
+                                </div>
                                 <div className="arrow" onClick={handleDaysClick}>
                                     {click.days ? (
                                         <Up/>
@@ -69,11 +75,7 @@ const PaginationB6 = () => {
                             <div className="unit">
                                 <div>End data</div>
                                 <div className="arrow" onClick={handleDateClick}>
-                                    {click.date ? (
-                                        <Up/>
-                                    ) : (
-                                        <Down/>
-                                    )}
+                                    <Down/>
                                 </div>
                                 {/* <div className="arrow"><Down/></div> */}
                             </div>

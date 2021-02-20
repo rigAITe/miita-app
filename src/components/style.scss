@@ -164,9 +164,9 @@ input{
 }
 
 .unit{
-    // display: flex;
-    display: grid;
-  grid-template-columns: repeat(2, auto);
+    display: flex;
+    // display: grid;
+//   grid-template-columns: repeat(2, auto);
     text-align: center;
     justify-content: center;
     // padding-top: 1rem;
@@ -176,13 +176,15 @@ input{
     }
     & div{
         color:  #ffffffb3;
-
+        margin-left: .39rem;
     }
     &-inner{
         display: flex;
-        border: .5px solid $paginationPrimaryColor;
+        font-size: .7rem;
+        justify-content: space-between;
+        // border: .5px solid $paginationPrimaryColor;
         & > *{
-            margin: .5rem;
+            margin: .2rem;
         }
     }
 }
@@ -482,6 +484,18 @@ footer{
         }
     }
 
+    .calc{
+        width: 33%;
+    }
+
+
+    .unit{
+        justify-content: space-around;
+        &-inner{
+            font-size: .9rem;
+        }
+    }mmmmm
+
     /*----------------------- FOOTER ---------------------------*/
 
     .headerMain{
@@ -605,7 +619,6 @@ footer{
 
     .reactions{
         width: 40%;
-        margin: auto;
     }
 
     .calc{
@@ -649,9 +662,10 @@ footer{
         }
     }
 
+
     .residential-appliances button,
     .data-width button {
-        margin-bottom: 0rem; 
+        margin-bottom: 2rem; 
     }
 
     .appliance-header{
