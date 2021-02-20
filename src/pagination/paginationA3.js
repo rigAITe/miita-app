@@ -40,7 +40,7 @@ const PaginationA3 = () => {
 
     }
 
-    console.log(data)
+    // console.log(data)
 
 
     const handleAppliancesChange = (e) => {

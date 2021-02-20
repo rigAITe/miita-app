@@ -63,25 +63,28 @@ const PaginationA5 = () => {
                         <div className="reactions-inner">
                             <div onClick={badClick}>
                                 {
-                                    click.bad  ? (<img src={BadR} alt="Bad img"/>) : (<img src={Bad} alt="Bad img"/>)
+                                    click.bad === true && click.mixed === false && click.happy === false  ? (<img src={BadR} alt="Bad img"/>) : (<img src={Bad} alt="Bad img"/>)
                                 }
                                 
                             </div>
                             <div onClick={mixedClick}>
                                 {
-                                    click.mixed ? (<img src={MixedR} alt="Bad img"/>) : (<img src={Mixed} alt="Bad img"/>)
+                                    click.mixed === true && click.bad === false && click.happy === false ? (<img src={MixedR} alt="Bad img"/>) : (<img src={Mixed} alt="Bad img"/>)
                                 }
                             </div>
                             <div onClick={happyClick}>
                                 {
-                                    click.happy ? (<img src={HappyR} alt="Bad img"/>) : (<img src={Happy} alt="Bad img"/>)
+                                    click.happy === true && click.mixed === false && click.bad === false ? (<img src={HappyR} alt="Bad img"/>) : (<img src={Happy} alt="Bad img"/>)
+                                    
                                 }
                             </div>
                         </div>
                     </div>
                     <div className="data-width">
+
                         {
-                            click.bad || click.mixed || click.happy === true 
+                            click.bad === true && click.mixed === false && click.happy === false
+                            // click.bad  || click.mixed || click.happy === true 
 
                             ?
 
@@ -97,8 +100,55 @@ const PaginationA5 = () => {
                             </div>
 
                             : 
+                            
+                            // <div>Rate us</div>
+                            console.log('MIXED n HAPPY false')
+                        }
 
-                                console.log('false')
+{
+                            click.bad === false && click.mixed === true && click.happy === false
+                            // click.bad  || click.mixed || click.happy === true 
+
+                            ?
+
+                            <div>
+                                <textarea placeholder="Tell us more"/>
+                                <div>
+                                    <label>Email Address</label>
+                                    <Input  type="email" />
+                                </div>
+                                <div>
+                                    <NavLink to="/"><Button text="Submit"/></NavLink>
+                                </div>
+                            </div>
+
+                            : 
+                            
+                            // <div>Rate us</div>
+                            console.log('BAD n HAPPY false')
+                        }
+
+{
+                            click.bad === false && click.mixed === false && click.happy === true
+                            // click.bad  || click.mixed || click.happy === true 
+
+                            ?
+
+                            <div>
+                                <textarea placeholder="Tell us more"/>
+                                <div>
+                                    <label>Email Address</label>
+                                    <Input  type="email" />
+                                </div>
+                                <div>
+                                    <NavLink to="/"><Button text="Submit"/></NavLink>
+                                </div>
+                            </div>
+
+                            : 
+                            
+                            // <div>Rate us</div>
+                            console.log('BAD n MIXED false')
                         }
                         
                     </div>
