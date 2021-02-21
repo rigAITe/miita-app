@@ -1,16 +1,17 @@
 import React, {useState} from 'react'
 
-const AddDevice = ({data: { appliance, hours, quantity, watt, remove, removeOnClick}}) => {
+const AddDevice = ({data: { appliance, hours, quantity, watt, remove, removeOnClick, id}}) => {
 
     const [ value, setValue ]  = useState(quantity)
 
      const valueChange = (e) => {
          setValue(e.target.value)
      }
+     
 
 
     return(
-        <div className="add-more-device">
+        <div className="add-more-device" key={id}>
             <div>
                 <p>{appliance}</p>
                 <p><b>{hours}hrs/day</b></p>
@@ -20,7 +21,8 @@ const AddDevice = ({data: { appliance, hours, quantity, watt, remove, removeOnCl
             </div>
             <div className="quantity">
                 <input onChange={valueChange}
-                        value={value}/>
+                    value={value}
+                    type='number'/>
             </div>
             <div onClick={removeOnClick} className='bin'>{remove}</div>
         </div>

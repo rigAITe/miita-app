@@ -19,16 +19,17 @@ const PaginationA3 = () => {
     const [ hours, setHours ] = useState('')
     const [ remove, setRemove ] = useState(<Bin/>)
 
+    
     const check = (e) => {
-        e.preventDefault()
-        console.log('hello')
-
+        // e.preventDefault()
         const dataObject = {
             appliance: appliance,
             hours: hours,
             quantity: quantity,
             watt: watt,
             remove: remove,
+            // id: data.length + 1,
+            removeOnClick: handleDelete,
             // removeOnClick: setRemove()
         }
 
@@ -40,6 +41,12 @@ const PaginationA3 = () => {
 
     }
 
+    const handleDelete = () => {
+        const newData = [...data];
+        newData.splice(data.length, 1);
+        // console.log(data.length)
+        setData(newData);
+    }
     // console.log(data)
 
 
