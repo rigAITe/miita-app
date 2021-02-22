@@ -43,51 +43,24 @@ const PaginationA4 = () => {
                     <div>
                         <div className="calc-inner">
                             <p>
-                                {click.unit ? (
-                                    'W'
-                                ) : (
-                                    'Unit'
-                                )}
-
-                                   /  
-
-                                {click.month ? (
-                                    'Yearly'
-                                ) : (
-                                    'Monthly'
-                                )} 
+                                {click.unit ? ('W' ) : ( 'Unit Consumed' )} / {click.month ? ( 'Year' ) : ( 'Month' )} 
                             </p>
-                            <div className="calc-data">37 days to go</div>
+                            <div className="calc-data">1356.67 Unit</div>
                             <div className="unit">
                                 <div className="unit-inner" onClick={handleMonthClick}>
                                     <div>
-                                        {click.month ? (
-                                            'Yearly'
-                                        ) : (
-                                            'Monthly'
-                                        )}
+                                        {click.month ? ( 'Yearly') : ( 'Monthly')}
                                     </div>
                                     <div className="arrow" onClick={handleMonthClick}>
-                                        {click.month ? (
-                                            <Up/>
-                                        ) : (
-                                            <Down/>
-                                        )}
+                                        {click.month ? ( <Up/> ) : ( <Down/> )}
                                     </div>
                                 </div>
                                 <div className="unit-inner">
-                                    <div>{click.unit ? (
-                                            'W'
-                                        ) : (
-                                            'Unit'
-                                        )}
+                                    <div>
+                                        {click.unit ? ( 'W' ) : ( 'Unit' )}
                                     </div>
                                     <div className="arrow" onClick={handleUnitClick}>
-                                        {click.unit ? (
-                                            <Up/>
-                                        ) : (
-                                            <Down/>
-                                        )}
+                                        {click.unit ? ( <Up/> ) : ( <Down/> )}
                                     </div>
                                 </div>
                                 
@@ -100,8 +73,8 @@ const PaginationA4 = () => {
                     </div>
                     <div>
                         <div className="calc-inner">
-                            <p>Remaining days</p>
-                            <div className="calc-data">25th October 2021</div>
+                            <p>Cost / Month</p>
+                            <div className="calc-data">5,246.68 NGN</div>
                             <div className="unit">
                                 <div className="unit-inner">
                                     <div>Monthly</div>

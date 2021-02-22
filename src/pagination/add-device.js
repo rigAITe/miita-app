@@ -8,8 +8,6 @@ const AddDevice = ({data: { appliance, hours, quantity, watt, remove, removeOnCl
          setValue(e.target.value)
      }
      
-
-
     return(
         <div className="add-more-device" key={id}>
             <div>

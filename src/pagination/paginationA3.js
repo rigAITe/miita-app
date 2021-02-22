@@ -18,6 +18,7 @@ const PaginationA3 = () => {
     const [ quantity, setQuantity ] = useState('')
     const [ hours, setHours ] = useState('')
     const [ remove, setRemove ] = useState(<Bin/>)
+    const [ id, setId ] = useState('')
 
     
     const check = (e) => {
@@ -28,7 +29,7 @@ const PaginationA3 = () => {
             quantity: quantity,
             watt: watt,
             remove: remove,
-            // id: data.length + 1,
+            id: data.length ,
             removeOnClick: handleDelete,
             // removeOnClick: setRemove()
         }
@@ -38,16 +39,17 @@ const PaginationA3 = () => {
         setWatt("")
         setQuantity("")
         setHours("")
-
     }
+    console.log('data is', data)
 
     const handleDelete = () => {
-        const newData = [...data];
-        newData.splice(data.length, 1);
+
+        // let newData = [...data]
+        // console.log('new data is', newData)
+        // // newData.splice(id, 1);
         // console.log(data.length)
-        setData(newData);
+        // setData( newData )
     }
-    // console.log(data)
 
 
     const handleAppliancesChange = (e) => {
@@ -116,6 +118,7 @@ const PaginationA3 = () => {
                             </div>
                             <div className="add-device" onClick={check}>+ Add more appliance</div>
                             <div className="add-device-mobile">
+                                <p className="remove" >{data.length > 0 ? 'Remove all' : ''}</p>
                                 { data.map( data => 
                                     <AddDevice data={data} />
                                 )}
@@ -126,6 +129,7 @@ const PaginationA3 = () => {
                         </form>
                     </div>
                     <div className="add-devices">
+                        <p className="remove" >{data.length > 0 ? 'Remove all' : console.log('it isnt')}</p>
                         { data.map( data => 
                             <AddDevice data={data} />
                         )}
