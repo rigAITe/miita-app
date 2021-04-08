@@ -7,9 +7,11 @@ import Footer from '../components/footer'
 import PaginationPathB from './paginationPathB'
 import AddDevice from '../pagination/add-device'
 import {ReactComponent as Bin} from '../images/bin.svg'
+import { nanoid } from 'nanoid'
 
 
 const PaginationB5 = () => {
+
 
     const [ data, setData ] = useState([])
 
@@ -19,17 +21,18 @@ const PaginationB5 = () => {
     const [ hours, setHours ] = useState('')
     const [ remove, setRemove ] = useState(<Bin/>)
 
-    const check = (e) => {
-        e.preventDefault()
-        console.log('hello')
+    let idTrack = nanoid()
 
+    
+    const check = (e, index) => {
         const dataObject = {
             appliance: appliance,
             hours: hours,
             quantity: quantity,
-            watt: watt,
+            wat: watt,
             remove: remove,
-            // removeOnClick: setRemove()
+            id: idTrack ,
+            // removeOnClick: handleDelete
         }
 
         setData(data.concat(dataObject))
@@ -37,10 +40,14 @@ const PaginationB5 = () => {
         setWatt("")
         setQuantity("")
         setHours("")
-
     }
+    // console.log('data is', data)
 
-    console.log(data)
+    const handleDelete = (id) => {
+        var list = data.filter( item => item.id !== id)
+        console.log(id)
+        setData( list )
+    }
 
 
     const handleAppliancesChange = (e) => {
@@ -57,6 +64,10 @@ const PaginationB5 = () => {
 
     const handleHoursChange = (e) => {
         setHours(e.target.value)
+    }
+
+    const removeAll = () => {
+        setData([])
     }
 
     return(
@@ -109,8 +120,18 @@ const PaginationB5 = () => {
                             </div>
                             <div className="add-device" onClick={check}>+ Add more appliance</div>
                             <div className="add-device-mobile">
-                                { data.map( data => 
-                                    <AddDevice data={data} />
+                                <p className="remove" onClick={removeAll}>{data.length > 0 ? 'Remove all' : ''}</p>
+                                { data.map( ( data, index) => 
+                                    <AddDevice 
+                                        appliance={data.appliance}
+                                        hours={data.hours}
+                                        quantity={data.quantity}
+                                        watt={data.watt}
+                                        remove={remove}
+                                        removeOnClick={handleDelete}
+                                        id={data.id}
+                                        key={index}
+                                    />
                                 )}
                             </div>
                             <div>
@@ -119,8 +140,18 @@ const PaginationB5 = () => {
                         </form>
                     </div>
                     <div className="add-devices">
-                        { data.map( data => 
-                            <AddDevice data={data} />
+                        <p className="remove" onClick={removeAll}>{data.length > 0 ? 'Remove all' : console.log('it isnt')}</p>
+                        { data.map( ( data, index ) => 
+                            <AddDevice 
+                                appliance={data.appliance}
+                                hours={data.hours}
+                                quantity={data.quantity}
+                                watt={data.watt}
+                                remove={remove}
+                                removeOnClick={handleDelete}
+                                id={data.id}
+                                key={index}
+                            />
                         )}
                     </div>
                 </div>

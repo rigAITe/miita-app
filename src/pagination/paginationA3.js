@@ -7,9 +7,11 @@ import Footer from '../components/footer'
 import PaginationPathA from './paginationPathA'
 import AddDevice from '../pagination/add-device'
 import {ReactComponent as Bin} from '../images/bin.svg'
+import { nanoid } from 'nanoid'
 
 
 const PaginationA3 = () => {
+
 
     const [ data, setData ] = useState([])
 
@@ -18,20 +20,18 @@ const PaginationA3 = () => {
     const [ quantity, setQuantity ] = useState('')
     const [ hours, setHours ] = useState('')
     const [ remove, setRemove ] = useState(<Bin/>)
-    const [ id, setId ] = useState('')
+
+    let idTrack = nanoid()
 
     
-    const check = (e) => {
-        // e.preventDefault()
+    const check = (e, index) => {
         const dataObject = {
             appliance: appliance,
             hours: hours,
             quantity: quantity,
             watt: watt,
             remove: remove,
-            id: data.length ,
-            removeOnClick: handleDelete,
-            // removeOnClick: setRemove()
+            id: idTrack ,
         }
 
         setData(data.concat(dataObject))
@@ -42,13 +42,10 @@ const PaginationA3 = () => {
     }
     console.log('data is', data)
 
-    const handleDelete = () => {
-
-        // let newData = [...data]
-        // console.log('new data is', newData)
-        // // newData.splice(id, 1);
-        // console.log(data.length)
-        // setData( newData )
+    const handleDelete = (id) => {
+        var list = data.filter( item => item.id !== id)
+        console.log(id)
+        setData( list )
     }
 
 
@@ -66,6 +63,10 @@ const PaginationA3 = () => {
 
     const handleHoursChange = (e) => {
         setHours(e.target.value)
+    }
+
+    const removeAll = () => {
+        setData([])
     }
 
     return(
@@ -118,9 +119,18 @@ const PaginationA3 = () => {
                             </div>
                             <div className="add-device" onClick={check}>+ Add more appliance</div>
                             <div className="add-device-mobile">
-                                <p className="remove" >{data.length > 0 ? 'Remove all' : ''}</p>
-                                { data.map( data => 
-                                    <AddDevice data={data} />
+                                <p className="remove" onClick={removeAll}>{data.length > 0 ? 'Remove all' : ''}</p>
+                                { data.map( ( data, index) => 
+                                    <AddDevice 
+                                        appliance={data.appliance}
+                                        hours={data.hours}
+                                        quantity={data.quantity}
+                                        watt={data.watt}
+                                        remove={remove}
+                                        removeOnClick={handleDelete}
+                                        id={data.id}
+                                        key={index}
+                                    />
                                 )}
                             </div>
                             <div>
@@ -129,9 +139,18 @@ const PaginationA3 = () => {
                         </form>
                     </div>
                     <div className="add-devices">
-                        <p className="remove" >{data.length > 0 ? 'Remove all' : console.log('it isnt')}</p>
-                        { data.map( data => 
-                            <AddDevice data={data} />
+                        <p className="remove" onClick={removeAll}>{data.length > 0 ? 'Remove all' : console.log('it isnt')}</p>
+                        { data.map( ( data, index ) => 
+                            <AddDevice 
+                                appliance={data.appliance}
+                                hours={data.hours}
+                                quantity={data.quantity}
+                                watt={data.watt}
+                                remove={remove}
+                                removeOnClick={handleDelete}
+                                id={data.id}
+                                key={index}
+                            />
                         )}
                     </div>
                 </div>

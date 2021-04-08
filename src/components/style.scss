@@ -46,6 +46,12 @@ input{
     border-radius: .2rem;
 }
 
+.remove,
+.add-device,
+button{
+    cursor: pointer;
+}
+
 
 
 /*----------------------- HOME ---------------------------*/
@@ -169,24 +175,20 @@ input{
 
 .unit{
     display: flex;
-    // display: grid;
-//   grid-template-columns: repeat(2, auto);
     text-align: center;
     justify-content: center;
-    // padding-top: 1rem;
     border: 1px solid $paginationPrimaryColor;
     & > *{
         margin: .5rem;
     }
     & div{
         color:  #ffffffb3;
-        margin-left: .39rem;
+        margin-left: .1rem;
     }
     &-inner{
         display: flex;
         font-size: .7rem;
         justify-content: space-between;
-        // border: .5px solid $paginationPrimaryColor;
         & > *{
             margin: .2rem;
         }
@@ -201,11 +203,8 @@ input{
 }
 
 .calc{
-    // display: flex;
-    // justify-content: space-around;
     width: 40%;
     margin: auto;
-    // padding-bottom: 4rem;
     font-size: .9rem;
     & > * {
         text-align: center;
@@ -247,9 +246,6 @@ input{
     }
 } 
 
-
-
-
 .reactions{
     width: 100%;
     font-size: .8rem;
@@ -281,7 +277,6 @@ input{
 
 .residential-appliances,
 .data-width{
-    // padding-top: 2rem;
     & input,
     & button {
         width: 100%;
@@ -291,7 +286,6 @@ input{
         background: linear-gradient(180deg, #DB956E 0%, #db956e5c 100%);;
         border: none;   
         padding: .4rem .9rem;
-        // margin-bottom: 3rem;
         font-size: .95rem;
     }
     & input{
@@ -364,9 +358,7 @@ textarea{
 
 footer{
     border-top: 0.5px solid #ffffff4d;
-    // position: absolute;
     bottom: 0;
-    // width: 100%;
     & .footer-logo{
         & img{
             padding-top: 2rem;
@@ -415,6 +407,11 @@ footer{
     font-size: .9rem;
     padding-bottom: 1.9rem;
     color: #ffffff80;
+}
+
+.residential-appliances button,
+.data-width button {
+    margin-bottom: 2rem; 
 }
 
 
@@ -498,7 +495,7 @@ footer{
         &-inner{
             font-size: .9rem;
         }
-    }mmmmm
+    }
 
     /*----------------------- FOOTER ---------------------------*/
 
@@ -524,6 +521,15 @@ footer{
         justify-content: space-evenly;
         width: 50%;
         margin: auto;
+    }
+
+    .reactions{
+        margin-bottom: 2rem;
+    }
+
+    .residential-appliances button,
+    .data-width button {
+        margin-bottom: 2rem; 
     }
 
 }
@@ -705,44 +711,7 @@ footer{
             margin: .9rem; 
         }
     }
-
-
-
-
-
-
-
-
-
-
-    // .riggy{
-    //     display: flex;
-    //     font-size: .8rem;
-    //     justify-content: space-between;
-    // }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

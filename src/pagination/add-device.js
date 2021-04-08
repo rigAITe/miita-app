@@ -1,29 +1,31 @@
 import React, {useState} from 'react'
 
-const AddDevice = ({data: { appliance, hours, quantity, watt, remove, removeOnClick, id}}) => {
+const AddDevice = ( props) => {
 
-    const [ value, setValue ]  = useState(quantity)
+    const [ value, setValue ]  = useState(props.quantity)
 
-     const valueChange = (e) => {
-         setValue(e.target.value)
-     }
+    console.log()
+
+    const valueChange = (e) => {
+        setValue(e.target.value)
+    }
      
     return(
-        <div className="add-more-device" key={id}>
+        <div className="add-more-device">
             <div>
-                <p>{appliance}</p>
-                <p><b>{hours}hrs/day</b></p>
+                <p>{props.appliance}</p>
+                <p><b>{props.hours}hrs/day</b></p>
             </div>
             <div>
-                <p>{watt} <b>W</b></p>
+                <p>{props.watt} <b>W</b></p>
             </div>
             <div className="quantity">
                 <input onChange={valueChange}
                     value={value}
                     type='number'/>
             </div>
-            <div onClick={removeOnClick} className='bin'>{remove}</div>
-        </div>
+            <div onClick={() => props.removeOnClick(props.id)} className='bin'>{props.remove}</div>
+        </div> 
     )
 }
 
