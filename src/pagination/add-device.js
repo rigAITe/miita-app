@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {ReactComponent as Bin} from '../images/bin.svg'
 
 const AddDevice = ( props) => {
 
@@ -24,7 +25,7 @@ const AddDevice = ( props) => {
                     value={value}
                     type='number'/>
             </div>
-            <div onClick={() => props.removeOnClick(props.id)} className='bin'>{props.remove}</div>
+            <div onClick={() => props.removeOnClick(props.id)} className='bin'><Bin/></div>
         </div> 
     )
 }

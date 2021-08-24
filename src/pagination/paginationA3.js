@@ -6,7 +6,6 @@ import { NavLink } from 'react-router-dom'
 import Footer from '../components/footer'
 import PaginationPathA from './paginationPathA'
 import AddDevice from '../pagination/add-device'
-import {ReactComponent as Bin} from '../images/bin.svg'
 import { nanoid } from 'nanoid'
 
 
@@ -19,21 +18,16 @@ const PaginationA3 = () => {
     const [ watt, setWatt ] = useState('')
     const [ quantity, setQuantity ] = useState('')
     const [ hours, setHours ] = useState('')
-    const [ remove, setRemove ] = useState(<Bin/>)
 
     let idTrack = nanoid()
-
-    
     const check = (e, index) => {
         const dataObject = {
             appliance: appliance,
             hours: hours,
             quantity: quantity,
             watt: watt,
-            remove: remove,
             id: idTrack ,
         }
-
         setData(data.concat(dataObject))
         setAppliance("")
         setWatt("")
@@ -117,7 +111,7 @@ const PaginationA3 = () => {
                                     onchange={handleHoursChange}
                                 />
                             </div>
-                            <div className="add-device" onClick={check}>+ Add more appliance</div>
+                            <div className="add-device" onClick={check}>+ Addd more appliance</div>
                             <div className="add-device-mobile">
                                 <p className="remove" onClick={removeAll}>{data.length > 0 ? 'Remove all' : ''}</p>
                                 { data.map( ( data, index) => 
@@ -126,10 +120,9 @@ const PaginationA3 = () => {
                                         hours={data.hours}
                                         quantity={data.quantity}
                                         watt={data.watt}
-                                        remove={remove}
                                         removeOnClick={handleDelete}
                                         id={data.id}
-                                        key={index}
+                                        key={data.id}
                                     />
                                 )}
                             </div>
@@ -146,10 +139,9 @@ const PaginationA3 = () => {
                                 hours={data.hours}
                                 quantity={data.quantity}
                                 watt={data.watt}
-                                remove={remove}
                                 removeOnClick={handleDelete}
                                 id={data.id}
-                                key={index}
+                                key={data.id}
                             />
                         )}
                     </div>
